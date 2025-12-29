@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Blog</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, .post-title { font-family: 'Lora', serif; }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-30">
+    <div class="max-w-4xl mx-auto px-6 py-10">
+      <h1 class="text-5xl font-bold tracking-tight">My Blog</h1>
+      <p class="text-lg text-gray-600 mt-3 font-light">Thoughts, ideas & stories</p>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+
+    
+      <div class="grid gap-8">
+        
+          <article
+            class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm
+                   transition-all duration-300 ease-out
+                   hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.01]">
+
+            <!-- Title -->
+            <a href="posts/0028564e.html">
+              <h2
+                class="post-title text-2xl font-semibold text-gray-900
+                       hover:text-blue-600 transition-colors duration-200">
+                FIrst blog
+              </h2>
+            </a>
+
+            <!-- Meta -->
+            <div class="flex items-center justify-between mt-4 text-sm">
+              <div class="text-gray-600">
+                By <span class="font-medium">admin</span>
+              </div>
+
+              <time class="text-gray-400 italic">
+                Dec 29, 2025
+              </time>
+            </div>
+          </article>
+        
+      </div>
+
+    
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-6 py-8 text-center text-sm text-gray-500">
+      <p>&copy; 2025 — Built with love using Flask & Github Pages.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
