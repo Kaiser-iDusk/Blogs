@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog Management System [Part 1]</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    article p {
+      margin-top: 1rem;
+      line-height: 1.8;
+    }
+
+    article h1, article h2, article h3 {
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+
+    article blockquote {
+      border-left: 4px solid #e5e7eb;
+      padding-left: 1rem;
+      color: #4b5563;
+      font-style: italic;
+    }
+
+    article code {
+      background: #f3f4f6;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <header class="border-b bg-white sticky top-0">
+    <div class="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-gray-700 hover:underline">← Back to Blogs</a>
+      <span class="text-sm text-gray-500">
+        Written by <strong>adminboss</strong>
+      </span>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+    <h1 class="text-4xl font-bold mb-6">
+      My Blog Management System [Part 1]
+    </h1>
+
+    <article class="prose prose-lg max-w-none">
+      <p>Hi everyone! In this blog I will discuss with you my <b>Blog Management System</b>. The idea employed here is not unique but still the implementation is a bit tricky. So I shall split it into 2 blogs.
+</p>
+
+<h3>Core Design:</h3>
+
+<p>The system stores all the blogs in <b>Github</b> and renders them through <b>Github Pages</b>. This solves the primary issue of storage since all the rendered markdown is converted into static HTML files. 
+</p>
+
+<p>Now the next thing is the backend. I chose <b>Flask</b> simply because this is a light-weight web app and I am more comfortable in Python than in JavaScript. I added a few common functionalities like <strong>login/signup</strong> but they are not the topic of discussion today.
+</p>
+
+<p>I used <b>Jinja2</b> templates to inject the markdown from the editor into a base template and that serves as the static HTML file.</p>
+
+<p>Finally a script to automate the git push was written, and it handles all the deployment process. As you might have guessed this part is carried out by spawning a thread otherwise the UI would have hung up.</p>
+
+<p>To sum up the core ideas are quite simple and the technology stack used is also quite familiar to everyone. But integrating them and debugging the errors was where the tricky part lies and it is not something which I can share through a blog.</p>
+
+<p>Honestly speaking a large part of the UI components like HTML and CSS was generated with the help of <b>ChatGPT</b>. Other LLMs also helped in debugging the error logs of <b>gunicorn</b> when I deployed the backend on AWS EC2 and I am really grateful that such technologies exist nowadays.</p>
+
+<p>Anyways the new year is one day away, and so let's hope the New Year brings us joy, peace and enough challenges to grow beyond our own limits. Meet you all in the next blog! Happy New Year in advance and stay tuned ~ </p>
+
+    </article>
+  </main>
+
+</body>
+</html>
